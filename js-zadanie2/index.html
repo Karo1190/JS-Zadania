@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie2 js</title>
+    <style>
+        li {
+            font-size: 20px;
+        }
+
+        .big {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Dodaj element listy</button>
+    <ul>
+
+    </ul>
+    <script>
+        let listElementNumber = 1;
+
+
+        const btn = document.querySelector("button");
+        const list = document.querySelector("ul");
+        btn.addEventListener("click", function () {
+            const liElement = document.createElement("li")
+            liElement.textContent = listElementNumber;
+            list.appendChild(liElement);
+            if (listElementNumber % 3 == 0) {
+                liElement.classList.add("big")
+            }
+            listElementNumber += 2;
+
+        })
+    </script>
+</body>
+
+</html>
